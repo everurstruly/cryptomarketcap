@@ -6,8 +6,6 @@ A React-based dashboard application that connects to live cryptocurrency data fe
 
 ## Purpose and Focus
 
-This portfolio project is built to demonstrate concrete abilities in modern web development:
-
 *   **Connecting to and managing live data streams** from a production WebSocket API, handling connection states, errors, and reconnection logic.
 *   **Processing and displaying high-frequency data updates** efficiently in a React interface, using state management techniques to ensure UI responsiveness.
 *   **Implementing standard financial data visualizations**—including a live price ticker, an order book, and an interactive chart—that form the core of trading and analytics platforms.
@@ -17,7 +15,7 @@ This portfolio project is built to demonstrate concrete abilities in modern web 
 
 ## Core Features
 
-### 1. Real-Time Asset List and Ticker
+### 1. Asset List and Ticker
 This component acts as the primary navigation and overview for the dashboard. It displays a continuously updated list of cryptocurrency pairs, providing a live snapshot of market movements. Users can interact with this list to drill down into specific assets, driving the data displayed in all other components.
 
 *   **Live Price**: The latest price for each asset, updating directly from the data feed.
@@ -25,7 +23,7 @@ This component acts as the primary navigation and overview for the dashboard. It
 *   **Interactive Selection**: Clicking on any asset will populate the other dashboard components with its specific data.
 *   **User Watchlists**: Users can star their favorite assets. This personalized list is saved to a database and syncs across browsing sessions.
 
-### 2. Live Order Book
+### 2. Order Book
 The order book visualizes market depth, representing the current balance of supply and demand for a selected asset. It provides a transparent view of the pending buy and sell orders in the market, which is critical information for understanding immediate price pressure and liquidity.
 
 *   **Market Depth Chart**: A two-sided display showing the top 15 active buy orders (bids) and sell orders (asks) in the market, along with their volumes.
@@ -38,9 +36,17 @@ This chart provides historical context for price movements. It transforms a raw 
 *   **Historical and Live Data**: The chart loads past price data and then updates in real-time with new trades.
 *   **Candlestick Format**: Prices are shown using candlestick bars, a standard format that displays the opening, closing, high, and low price for a given time period.
 
-### 4. User and Collaboration Features
+### 4. User and Collaboration
 This suite of features extends the dashboard from a passive display into an interactive, shared application. It demonstrates how to layer user-specific functionality and real-time collaboration on top of a public data stream, showcasing full-stack application logic.
 
 *   **Live Price Triggers**: Users can set simple price targets for assets on their watchlist (e.g., "Alert me if Bitcoin exceeds $90,000"). This logic runs in the browser, and when triggered, creates a prominent visual notification within the dashboard.
 *   **Live Viewers Counter**: A display showing the number of users currently viewing the dashboard, updated in real-time.
 *   **Shared Market Sentiment**: A simple widget where users can vote "Bullish" or "Bearish" on an asset and see the aggregated, live results from all current users.
+
+---
+
+**Success Criteria:**
+1. See live cryptocurrency prices updating in a table
+2. Select assets to view their order book and price chart
+3. Star favorites that persist across sessions
+4. See how many other users are currently viewing the dashboard
